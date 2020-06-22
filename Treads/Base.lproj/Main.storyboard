@@ -1,80 +1,193 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Run-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="BeganRunVC" customModule="Treads" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD">
-                                <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" xcode11CocoaTouchSystemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="m07-89-khO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tMj-mW-rcO">
+                                <rect key="frame" x="0.0" y="121.5" width="414" height="547.5"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Run" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWC-fY-eYv">
+                                <rect key="frame" x="185" y="68" width="44.5" height="29.5"/>
+                                <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" xcode11CocoaTouchSystemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRE-UA-531">
+                                <rect key="frame" x="171.5" y="698" width="71" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="71" id="oEb-kz-bLc"/>
+                                    <constraint firstAttribute="height" constant="71" id="ySu-YS-FDe"/>
+                                </constraints>
+                                <state key="normal" image="startRunningButton"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Running" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gck-kN-hOe">
+                                <rect key="frame" x="0.0" y="781" width="414" height="20"/>
+                                <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9u0-1R-uRb">
+                                <rect key="frame" x="336" y="598" width="58" height="58"/>
+                                <state key="normal" image="centerNavButton"/>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="9u0-1R-uRb" firstAttribute="top" secondItem="tMj-mW-rcO" secondAttribute="bottom" constant="-71" id="0oQ-0u-c5h"/>
+                            <constraint firstItem="m07-89-khO" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="CT3-Pg-wMP"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="Gck-kN-hOe" secondAttribute="trailing" id="Cui-CW-eYH"/>
+                            <constraint firstItem="Gck-kN-hOe" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="Ibs-D0-u2P"/>
+                            <constraint firstItem="m07-89-khO" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="J02-tw-rx5"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="Gck-kN-hOe" secondAttribute="bottom" constant="12" id="Lff-Lm-gC6"/>
+                            <constraint firstItem="WRE-UA-531" firstAttribute="top" secondItem="tMj-mW-rcO" secondAttribute="bottom" constant="29" id="NC3-rJ-aJb"/>
+                            <constraint firstItem="m07-89-khO" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="NTk-Uf-LE6"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="9u0-1R-uRb" secondAttribute="trailing" constant="20" id="VIT-xr-Q2t"/>
+                            <constraint firstItem="QWC-fY-eYv" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="Vel-wL-pdF"/>
+                            <constraint firstItem="WRE-UA-531" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="cCP-Ee-oQe"/>
+                            <constraint firstAttribute="bottom" secondItem="m07-89-khO" secondAttribute="bottom" id="gYv-yI-AHd"/>
+                            <constraint firstItem="QWC-fY-eYv" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="24" id="h3K-5h-zTi"/>
+                            <constraint firstItem="tMj-mW-rcO" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="kau-nc-JBH"/>
+                            <constraint firstItem="Gck-kN-hOe" firstAttribute="top" secondItem="WRE-UA-531" secondAttribute="bottom" constant="12" id="sDo-ix-vRI"/>
+                            <constraint firstItem="tMj-mW-rcO" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="vC2-VD-rUy"/>
+                            <constraint firstItem="tMj-mW-rcO" firstAttribute="top" secondItem="QWC-fY-eYv" secondAttribute="bottom" constant="24" id="vvl-fm-9zq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Run" image="tabbar-runIconGray" selectedImage="tabbar-runIcon" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
         </scene>
-        <!--Second-->
+        <!--My Log-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="RunLogVC" customModule="Treads" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" xcode11CocoaTouchSystemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="VdG-8T-cGE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLb-o2-CXB">
+                                <rect key="frame" x="186.5" y="68" width="41" height="29.5"/>
+                                <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" xcode11CocoaTouchSystemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="95" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ILX-Cc-nVN">
+                                <rect key="frame" x="0.0" y="133.5" width="414" height="679.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="95" id="BJn-Ht-Muk">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="95"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BJn-Ht-Muk" id="GVw-jI-YDv">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="93e-6m-mUU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4me-Iq-NiK">
+                                                    <rect key="frame" x="20" y="25.5" width="68" height="44"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B4b-5C-Nhw">
+                                                            <rect key="frame" x="0.0" y="0.0" width="68" height="21"/>
+                                                            <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.2 mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HnV-Tk-Iqu">
+                                                            <rect key="frame" x="10.5" y="23" width="47.5" height="21"/>
+                                                            <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="17"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PCm-A2-cps">
+                                                    <rect key="frame" x="184" y="25" width="46" height="45.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:08" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMZ-0t-xWh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="46" height="27"/>
+                                                            <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="22"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faL-Pc-b2y">
+                                                            <rect key="frame" x="11" y="27" width="24.5" height="18.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="24.5" id="mOT-yZ-i4V"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="15"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11/25/17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLb-8c-rp4">
+                                                    <rect key="frame" x="333.5" y="39" width="60.5" height="17.5"/>
+                                                    <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="93e-6m-mUU" secondAttribute="trailing" id="0sn-pu-hd0"/>
+                                                <constraint firstAttribute="bottom" secondItem="93e-6m-mUU" secondAttribute="bottom" id="7Hb-VF-wfI"/>
+                                                <constraint firstItem="4me-Iq-NiK" firstAttribute="centerY" secondItem="GVw-jI-YDv" secondAttribute="centerY" id="Py2-9K-pAv"/>
+                                                <constraint firstAttribute="trailing" secondItem="wLb-8c-rp4" secondAttribute="trailing" constant="20" id="Q3f-mb-taM"/>
+                                                <constraint firstItem="93e-6m-mUU" firstAttribute="top" secondItem="GVw-jI-YDv" secondAttribute="top" id="cND-TM-gHw"/>
+                                                <constraint firstItem="93e-6m-mUU" firstAttribute="leading" secondItem="GVw-jI-YDv" secondAttribute="leading" id="fVC-wI-N45"/>
+                                                <constraint firstItem="PCm-A2-cps" firstAttribute="centerY" secondItem="GVw-jI-YDv" secondAttribute="centerY" id="iuP-5w-Z26"/>
+                                                <constraint firstItem="PCm-A2-cps" firstAttribute="centerX" secondItem="GVw-jI-YDv" secondAttribute="centerX" id="mso-CO-Kuw"/>
+                                                <constraint firstItem="wLb-8c-rp4" firstAttribute="centerY" secondItem="GVw-jI-YDv" secondAttribute="centerY" id="pFs-zW-eFo"/>
+                                                <constraint firstItem="4me-Iq-NiK" firstAttribute="leading" secondItem="GVw-jI-YDv" secondAttribute="leading" constant="20" id="vBM-hZ-bJe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="gLb-o2-CXB" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="24" id="3vB-bN-ffX"/>
+                            <constraint firstItem="gLb-o2-CXB" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="7cU-LJ-nLC"/>
+                            <constraint firstAttribute="bottom" secondItem="VdG-8T-cGE" secondAttribute="bottom" id="HcV-iP-DuG"/>
+                            <constraint firstItem="VdG-8T-cGE" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="top" id="NjK-Lb-9Tm"/>
+                            <constraint firstItem="VdG-8T-cGE" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="O98-Ed-Clh"/>
+                            <constraint firstItem="ILX-Cc-nVN" firstAttribute="bottom" secondItem="O1u-W8-tvY" secondAttribute="bottom" id="bpA-SG-8VS"/>
+                            <constraint firstItem="VdG-8T-cGE" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="k8W-EK-aBR"/>
+                            <constraint firstItem="ILX-Cc-nVN" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="kpg-c2-6dQ"/>
+                            <constraint firstItem="ILX-Cc-nVN" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="rWv-hc-gFF"/>
+                            <constraint firstItem="ILX-Cc-nVN" firstAttribute="top" secondItem="gLb-o2-CXB" secondAttribute="bottom" constant="36" id="sq4-Ox-Uy6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="My Log" image="tabbar-myLogIconGray" selectedImage="tabbar-myLogIcon" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="749.27536231884062" y="359.59821428571428"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -96,7 +209,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="BG" width="375" height="667"/>
+        <image name="centerNavButton" width="58" height="58"/>
+        <image name="startRunningButton" width="71" height="71"/>
+        <image name="tabbar-myLogIcon" width="25" height="25"/>
+        <image name="tabbar-myLogIconGray" width="25" height="25"/>
+        <image name="tabbar-runIcon" width="27" height="28"/>
+        <image name="tabbar-runIconGray" width="27" height="28"/>
     </resources>
 </document>
