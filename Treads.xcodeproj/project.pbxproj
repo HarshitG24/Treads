@@ -32,6 +32,7 @@
 		EE1566F524A0E28C00644B48 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE1566E324A0E28B00644B48 /* Montserrat-BlackItalic.ttf */; };
 		EE1566F624A0E28C00644B48 /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE1566E424A0E28B00644B48 /* Montserrat-LightItalic.ttf */; };
 		EE1566F724A0E28C00644B48 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE1566E524A0E28C00644B48 /* Montserrat-ExtraBoldItalic.ttf */; };
+		EEA9EF3F24A138860054C432 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9EF3E24A138860054C432 /* LocationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		EE1566E324A0E28B00644B48 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
 		EE1566E424A0E28B00644B48 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
 		EE1566E524A0E28C00644B48 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		EEA9EF3E24A138860054C432 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +104,6 @@
 			children = (
 				EE1566B824A0DE9F00644B48 /* AppDelegate.swift */,
 				EE1566BA24A0DE9F00644B48 /* SceneDelegate.swift */,
-				EE1566BC24A0DE9F00644B48 /* BeganRunVC.swift */,
-				EE1566BE24A0DE9F00644B48 /* RunLogVC.swift */,
 				EE1566C024A0DE9F00644B48 /* Main.storyboard */,
 				EE1566C324A0DEA200644B48 /* Assets.xcassets */,
 				EE1566C524A0DEA200644B48 /* LaunchScreen.storyboard */,
@@ -154,6 +154,9 @@
 		EE1566D124A0E15700644B48 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EEA9EF3E24A138860054C432 /* LocationVC.swift */,
+				EE1566BE24A0DE9F00644B48 /* RunLogVC.swift */,
+				EE1566BC24A0DE9F00644B48 /* BeganRunVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				EE1566BD24A0DE9F00644B48 /* BeganRunVC.swift in Sources */,
 				EE1566B924A0DE9F00644B48 /* AppDelegate.swift in Sources */,
 				EE1566BB24A0DE9F00644B48 /* SceneDelegate.swift in Sources */,
+				EEA9EF3F24A138860054C432 /* LocationVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
