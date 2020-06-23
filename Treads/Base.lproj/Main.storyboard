@@ -170,6 +170,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWf-eA-zdC">
                                         <rect key="frame" x="228" y="30.5" width="75" height="71"/>
                                         <state key="normal" image="pauseButton"/>
+                                        <connections>
+                                            <action selector="pauseButtonPressed:" destination="i7t-bN-WNa" eventType="touchUpInside" id="3Be-N2-Thz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bof-v3-a2w">
                                         <rect key="frame" x="20" y="28.5" width="232" height="75"/>
@@ -231,6 +234,9 @@
                     <navigationItem key="navigationItem" id="9KE-HM-Hix"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="distanceLbl" destination="81O-ep-zOu" id="H5b-Dj-pls"/>
+                        <outlet property="durationLbl" destination="l7I-G5-psC" id="Wi9-Tq-its"/>
+                        <outlet property="paceLbl" destination="aZE-Tp-3QN" id="2UB-v5-2qQ"/>
                         <outlet property="sliderBackground" destination="Bof-v3-a2w" id="2Ky-nP-TwT"/>
                         <outlet property="sliderImageView" destination="ICm-oZ-VMD" id="UjF-K4-95M"/>
                     </connections>
@@ -291,13 +297,13 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PCm-A2-cps">
                                                     <rect key="frame" x="184" y="25" width="46" height="45.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:08" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMZ-0t-xWh">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0:08" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMZ-0t-xWh">
                                                             <rect key="frame" x="0.0" y="0.0" width="46" height="27"/>
                                                             <fontDescription key="fontDescription" name="Charter-Bold" family="Charter" pointSize="22"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faL-Pc-b2y">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="/mi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faL-Pc-b2y">
                                                             <rect key="frame" x="11" y="27" width="24.5" height="18.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="24.5" id="mOT-yZ-i4V"/>

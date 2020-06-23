@@ -7,13 +7,20 @@
 //
 
 import UIKit
+import MapKit
 
 class CurrentRunVC: LocationVC {
 
     
     @IBOutlet weak var sliderBackground: UIButton!
     @IBOutlet weak var sliderImageView: UIButton!
+    @IBOutlet weak var durationLbl: UILabel!
+    @IBOutlet weak var paceLbl: UILabel!
+    @IBOutlet weak var distanceLbl: UILabel!
     
+    var startLocation: CLLocation!
+    var lastLocation: CLLocation!
+    var runDistance = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +29,24 @@ class CurrentRunVC: LocationVC {
         sliderImageView.addGestureRecognizer(swipeGesture)
         sliderImageView.isUserInteractionEnabled = true
         swipeGesture.delegate = self as? UIGestureRecognizerDelegate
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        manager?.delegate = self
+        manager?.distanceFilter = 10 // min distance a device must move to generate update, 10 meters
+        startRun()
+    }
+    
+    func startRun(){
+        manager?.startUpdatingLocation()
+    }
+    
+    func endRun(){
+        manager?.stopUpdatingLocation()
+    }
+    
+    @IBAction func pauseButtonPressed(_ sender: Any){
+        
     }
     
     @objc func endRunSwiped(sender: UIPanGestureRecognizer){
@@ -48,5 +73,28 @@ class CurrentRunVC: LocationVC {
                 }
             }
         }
+    }
+}
+
+extension CurrentRunVC: CLLocationManagerDelegate{
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        
+        if status == .authorizedWhenInUse{
+            checkLocationAuthStatus()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        if startLocation == nil{
+            // run not started yet...
+            startLocation = locations.first
+        }else if let location = locations.last{
+            // run has already started...
+            runDistance += lastLocation.distance(from: location) // distance between last location and the location got
+            distanceLbl.text = "\(runDistance)"
+        }
+        
+        lastLocation = locations.last
     }
 }
