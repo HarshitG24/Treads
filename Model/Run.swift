@@ -10,14 +10,14 @@ import Foundation
 import RealmSwift
 
 class Run: Object{
-    dynamic private(set) public var id = ""
-    dynamic private(set) public var date = NSDate()
-    dynamic private(set) public var pace = 0
-    dynamic private(set) public var distance = 0.0
-    dynamic private(set) public var duration = 0
+   @objc dynamic private(set) public var id = ""
+   @objc dynamic private(set) public var date = NSDate()
+   @objc dynamic private(set) public var pace = 0
+   @objc dynamic private(set) public var distance = 0.0
+   @objc dynamic private(set) public var duration = 0
     
     // we need to tell realm, which property will be our primary key
-    override class func primaryKey() -> String? {
+    override class func primaryKey() -> String {
         return "id"
     }
     
@@ -28,10 +28,39 @@ class Run: Object{
     
     convenience init(pace: Int, distance: Double, duration: Int){
         self.init()
-        self.id = UUID().uuidString.lowercased()
+        self.id = UUID().uuidString
         self.date = NSDate()
         self.pace = pace
         self.duration = duration
         self.distance = distance
+    }
+    
+    // static here so that, we need make the run object static
+    // we need to create realm object for every operation
+    static func addRunToRealm(pace: Int, distance: Double, duration: Int){
+        REALM_QUEUE.sync {
+            let run =  Run(pace: pace, distance: distance, duration: duration)
+            do{
+                let realm = try Realm()
+                try realm.write{
+                    realm.add(run)
+                    try realm.commitWrite() // safe to use, ensure everything is saved
+                }
+            }catch{
+                debugPrint("error saving run object to realm")
+            }
+        }
+    }
+    
+    // order of data is not fixed here.
+    static func getAllRuns() -> Results<Run>?{
+        do{
+            let realm = try Realm()
+            var runs = realm.objects(Run.self)
+            runs = runs.sorted(byKeyPath: "date", ascending: false)
+            return runs
+        }catch{
+            return nil
+        }
     }
 }

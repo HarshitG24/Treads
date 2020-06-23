@@ -50,6 +50,7 @@ class CurrentRunVC: LocationVC {
     func endRun(){
         manager?.stopUpdatingLocation()
         // code to add data in realm
+        Run.addRunToRealm(pace: pace, distance: runDistance, duration: counter)
     }
     
     func pauseRun(){
