@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC37A0FF0702542998B3D2A0 /* Pods_Treads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C07488DD01794F0B1BB97BE /* Pods_Treads.framework */; };
 		EE1566B924A0DE9F00644B48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1566B824A0DE9F00644B48 /* AppDelegate.swift */; };
 		EE1566BB24A0DE9F00644B48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1566BA24A0DE9F00644B48 /* SceneDelegate.swift */; };
 		EE1566BD24A0DE9F00644B48 /* BeganRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1566BC24A0DE9F00644B48 /* BeganRunVC.swift */; };
@@ -34,10 +35,14 @@
 		EE1566F724A0E28C00644B48 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE1566E524A0E28C00644B48 /* Montserrat-ExtraBoldItalic.ttf */; };
 		EE6C0F5824A1FF6B00358D74 /* CurrentRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6C0F5724A1FF6B00358D74 /* CurrentRunVC.swift */; };
 		EE7E74C824A217340091EF6E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7E74C724A217340091EF6E /* Extensions.swift */; };
+		EE7E74CA24A2310F0091EF6E /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7E74C924A2310F0091EF6E /* Run.swift */; };
 		EEA9EF3F24A138860054C432 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9EF3E24A138860054C432 /* LocationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C07488DD01794F0B1BB97BE /* Pods_Treads.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Treads.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7139AF290D7ABA3045A30B97 /* Pods-Treads.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treads.debug.xcconfig"; path = "Target Support Files/Pods-Treads/Pods-Treads.debug.xcconfig"; sourceTree = "<group>"; };
+		C6D29FDECD092C1B57EDF518 /* Pods-Treads.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Treads.release.xcconfig"; path = "Target Support Files/Pods-Treads/Pods-Treads.release.xcconfig"; sourceTree = "<group>"; };
 		EE1566B524A0DE9F00644B48 /* Treads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Treads.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE1566B824A0DE9F00644B48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE1566BA24A0DE9F00644B48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +72,7 @@
 		EE1566E524A0E28C00644B48 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		EE6C0F5724A1FF6B00358D74 /* CurrentRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunVC.swift; sourceTree = "<group>"; };
 		EE7E74C724A217340091EF6E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		EE7E74C924A2310F0091EF6E /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 		EEA9EF3E24A138860054C432 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,12 +81,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC37A0FF0702542998B3D2A0 /* Pods_Treads.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		962E5961903C9EE46702FB0E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7139AF290D7ABA3045A30B97 /* Pods-Treads.debug.xcconfig */,
+				C6D29FDECD092C1B57EDF518 /* Pods-Treads.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AF50EE6D10B54786C88C41A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C07488DD01794F0B1BB97BE /* Pods_Treads.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EE1566AC24A0DE9F00644B48 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +116,8 @@
 				EE1566CE24A0E13900644B48 /* Resources */,
 				EE1566B724A0DE9F00644B48 /* Treads */,
 				EE1566B624A0DE9F00644B48 /* Products */,
+				962E5961903C9EE46702FB0E /* Pods */,
+				AF50EE6D10B54786C88C41A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,6 +203,7 @@
 		EE1566D324A0E16200644B48 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EE7E74C924A2310F0091EF6E /* Run.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,9 +215,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE1566CB24A0DEA200644B48 /* Build configuration list for PBXNativeTarget "Treads" */;
 			buildPhases = (
+				0499DB2092193BDAFAAD5EB2 /* [CP] Check Pods Manifest.lock */,
 				EE1566B124A0DE9F00644B48 /* Sources */,
 				EE1566B224A0DE9F00644B48 /* Frameworks */,
 				EE1566B324A0DE9F00644B48 /* Resources */,
+				5941C969DB5D9DFEC5426778 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,12 +294,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0499DB2092193BDAFAAD5EB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Treads-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5941C969DB5D9DFEC5426778 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Treads/Pods-Treads-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Treads/Pods-Treads-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Treads/Pods-Treads-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EE1566B124A0DE9F00644B48 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EE1566BF24A0DE9F00644B48 /* RunLogVC.swift in Sources */,
+				EE7E74CA24A2310F0091EF6E /* Run.swift in Sources */,
 				EE1566BD24A0DE9F00644B48 /* BeganRunVC.swift in Sources */,
 				EE1566B924A0DE9F00644B48 /* AppDelegate.swift in Sources */,
 				EE1566BB24A0DE9F00644B48 /* SceneDelegate.swift in Sources */,
@@ -418,6 +490,7 @@
 		};
 		EE1566CC24A0DEA200644B48 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7139AF290D7ABA3045A30B97 /* Pods-Treads.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -436,6 +509,7 @@
 		};
 		EE1566CD24A0DEA200644B48 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6D29FDECD092C1B57EDF518 /* Pods-Treads.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
