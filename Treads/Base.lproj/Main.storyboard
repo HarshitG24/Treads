@@ -83,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
         </scene>
-        <!--View Controller-->
+        <!--Current RunVC-->
         <scene sceneID="scw-bU-5ja">
             <objects>
-                <viewController id="i7t-bN-WNa" sceneMemberID="viewController">
+                <viewController id="i7t-bN-WNa" customClass="CurrentRunVC" customModule="Treads" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HQY-By-e0C">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,16 +175,16 @@
                                         <rect key="frame" x="20" y="28.5" width="232" height="75"/>
                                         <state key="normal" image="endRunOutline"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICm-oZ-VMD">
-                                        <rect key="frame" x="30" y="37.5" width="57" height="57"/>
-                                        <state key="normal" image="endRunButton"/>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="END RUN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58l-zh-kfS">
                                         <rect key="frame" x="115.5" y="54" width="86.5" height="24.5"/>
                                         <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICm-oZ-VMD">
+                                        <rect key="frame" x="30" y="37.5" width="57" height="57"/>
+                                        <state key="normal" image="endRunButton"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -230,6 +230,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="9KE-HM-Hix"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="sliderBackground" destination="Bof-v3-a2w" id="2Ky-nP-TwT"/>
+                        <outlet property="sliderImageView" destination="ICm-oZ-VMD" id="UjF-K4-95M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0AX-ow-IFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
