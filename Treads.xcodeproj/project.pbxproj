@@ -33,6 +33,7 @@
 		EE1566F624A0E28C00644B48 /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE1566E424A0E28B00644B48 /* Montserrat-LightItalic.ttf */; };
 		EE1566F724A0E28C00644B48 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE1566E524A0E28C00644B48 /* Montserrat-ExtraBoldItalic.ttf */; };
 		EE6C0F5824A1FF6B00358D74 /* CurrentRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6C0F5724A1FF6B00358D74 /* CurrentRunVC.swift */; };
+		EE7E74C824A217340091EF6E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7E74C724A217340091EF6E /* Extensions.swift */; };
 		EEA9EF3F24A138860054C432 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9EF3E24A138860054C432 /* LocationVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		EE1566E424A0E28B00644B48 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
 		EE1566E524A0E28C00644B48 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		EE6C0F5724A1FF6B00358D74 /* CurrentRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunVC.swift; sourceTree = "<group>"; };
+		EE7E74C724A217340091EF6E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EEA9EF3E24A138860054C432 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +144,7 @@
 		EE1566CF24A0E14900644B48 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EE7E74C724A217340091EF6E /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				EE1566BB24A0DE9F00644B48 /* SceneDelegate.swift in Sources */,
 				EE6C0F5824A1FF6B00358D74 /* CurrentRunVC.swift in Sources */,
 				EEA9EF3F24A138860054C432 /* LocationVC.swift in Sources */,
+				EE7E74C824A217340091EF6E /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

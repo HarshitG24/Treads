@@ -169,6 +169,10 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWf-eA-zdC">
                                         <rect key="frame" x="228" y="30.5" width="75" height="71"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="71" id="HYG-no-gWZ"/>
+                                            <constraint firstAttribute="width" constant="75" id="dfG-li-7B6"/>
+                                        </constraints>
                                         <state key="normal" image="pauseButton"/>
                                         <connections>
                                             <action selector="pauseButtonPressed:" destination="i7t-bN-WNa" eventType="touchUpInside" id="3Be-N2-Thz"/>
@@ -237,6 +241,7 @@
                         <outlet property="distanceLbl" destination="81O-ep-zOu" id="H5b-Dj-pls"/>
                         <outlet property="durationLbl" destination="l7I-G5-psC" id="Wi9-Tq-its"/>
                         <outlet property="paceLbl" destination="aZE-Tp-3QN" id="2UB-v5-2qQ"/>
+                        <outlet property="pauseBtn" destination="bWf-eA-zdC" id="vig-Iu-ugc"/>
                         <outlet property="sliderBackground" destination="Bof-v3-a2w" id="2Ky-nP-TwT"/>
                         <outlet property="sliderImageView" destination="ICm-oZ-VMD" id="UjF-K4-95M"/>
                     </connections>
