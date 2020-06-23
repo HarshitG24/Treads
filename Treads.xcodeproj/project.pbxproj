@@ -37,6 +37,7 @@
 		EE7E74C824A217340091EF6E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7E74C724A217340091EF6E /* Extensions.swift */; };
 		EE7E74CA24A2310F0091EF6E /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7E74C924A2310F0091EF6E /* Run.swift */; };
 		EE7E74CC24A2421B0091EF6E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7E74CB24A2421B0091EF6E /* Constants.swift */; };
+		EE7E74CE24A247C70091EF6E /* RunLogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7E74CD24A247C70091EF6E /* RunLogCell.swift */; };
 		EEA9EF3F24A138860054C432 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9EF3E24A138860054C432 /* LocationVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		EE7E74C724A217340091EF6E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EE7E74C924A2310F0091EF6E /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 		EE7E74CB24A2421B0091EF6E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EE7E74CD24A247C70091EF6E /* RunLogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLogCell.swift; sourceTree = "<group>"; };
 		EEA9EF3E24A138860054C432 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +201,7 @@
 		EE1566D224A0E15C00644B48 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EE7E74CD24A247C70091EF6E /* RunLogCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				EE7E74CA24A2310F0091EF6E /* Run.swift in Sources */,
 				EE1566BD24A0DE9F00644B48 /* BeganRunVC.swift in Sources */,
 				EE1566B924A0DE9F00644B48 /* AppDelegate.swift in Sources */,
+				EE7E74CE24A247C70091EF6E /* RunLogCell.swift in Sources */,
 				EE1566BB24A0DE9F00644B48 /* SceneDelegate.swift in Sources */,
 				EE6C0F5824A1FF6B00358D74 /* CurrentRunVC.swift in Sources */,
 				EEA9EF3F24A138860054C432 /* LocationVC.swift in Sources */,

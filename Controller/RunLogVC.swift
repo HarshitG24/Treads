@@ -10,10 +10,40 @@ import UIKit
 
 class RunLogVC: UIViewController {
 
+    @IBOutlet weak var runLogTableView: UITableView!
+    
+    var runs = Run.getAllRuns()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        runs = Run.getAllRuns()
+        runLogTableView.reloadData()
     }
 
 
 }
 
+extension RunLogVC: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return runs?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "RunLogCell", for: indexPath) as? RunLogCell else { return UITableViewCell()}
+        
+        guard let run = runs?[indexPath.row] else {return UITableViewCell()}
+        
+        cell.customizeCell(run: run)
+        
+        return cell
+    }
+    
+    
+}
