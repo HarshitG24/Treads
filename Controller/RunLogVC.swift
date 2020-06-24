@@ -45,5 +45,18 @@ extension RunLogVC: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let contextItem = UIContextualAction(style: .destructive, title: "Delete") {  (contextualAction, view, boolValue) in
+            
+            if let delrun = self.runs?[indexPath.row]{
+                Run.deleteRun(run: delrun)
+                tableView.reloadData()
+            }
+        }
+        let swipeActions = UISwipeActionsConfiguration(actions: [contextItem])
+
+        return swipeActions
+    }
     
 }

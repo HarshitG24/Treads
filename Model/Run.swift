@@ -68,4 +68,15 @@ class Run: Object{
             return nil
         }
     }
+    
+    static func deleteRun(run: Run){
+        do{
+            let realm = try Realm(configuration: RealmConfig.runDataConfig)
+            try! realm.write {
+                realm.delete(run)
+            }
+        }catch{
+            debugPrint("Unable to delete")
+        }
+    }
 }
