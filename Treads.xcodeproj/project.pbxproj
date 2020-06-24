@@ -33,6 +33,8 @@
 		EE1566F524A0E28C00644B48 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE1566E324A0E28B00644B48 /* Montserrat-BlackItalic.ttf */; };
 		EE1566F624A0E28C00644B48 /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE1566E424A0E28B00644B48 /* Montserrat-LightItalic.ttf */; };
 		EE1566F724A0E28C00644B48 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE1566E524A0E28C00644B48 /* Montserrat-ExtraBoldItalic.ttf */; };
+		EE37669C24A366AB009B9DE1 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE37669B24A366AB009B9DE1 /* Location.swift */; };
+		EE37669E24A36B17009B9DE1 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE37669D24A36B17009B9DE1 /* RealmConfig.swift */; };
 		EE6C0F5824A1FF6B00358D74 /* CurrentRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6C0F5724A1FF6B00358D74 /* CurrentRunVC.swift */; };
 		EE7E74C824A217340091EF6E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7E74C724A217340091EF6E /* Extensions.swift */; };
 		EE7E74CA24A2310F0091EF6E /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7E74C924A2310F0091EF6E /* Run.swift */; };
@@ -72,6 +74,8 @@
 		EE1566E324A0E28B00644B48 /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
 		EE1566E424A0E28B00644B48 /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
 		EE1566E524A0E28C00644B48 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		EE37669B24A366AB009B9DE1 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		EE37669D24A36B17009B9DE1 /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
 		EE6C0F5724A1FF6B00358D74 /* CurrentRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunVC.swift; sourceTree = "<group>"; };
 		EE7E74C724A217340091EF6E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EE7E74C924A2310F0091EF6E /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				EE7E74CB24A2421B0091EF6E /* Constants.swift */,
+				EE37669D24A36B17009B9DE1 /* RealmConfig.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				EE7E74C924A2310F0091EF6E /* Run.swift */,
+				EE37669B24A366AB009B9DE1 /* Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -348,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE1566BF24A0DE9F00644B48 /* RunLogVC.swift in Sources */,
+				EE37669C24A366AB009B9DE1 /* Location.swift in Sources */,
 				EE7E74CA24A2310F0091EF6E /* Run.swift in Sources */,
 				EE1566BD24A0DE9F00644B48 /* BeganRunVC.swift in Sources */,
 				EE1566B924A0DE9F00644B48 /* AppDelegate.swift in Sources */,
@@ -357,6 +364,7 @@
 				EEA9EF3F24A138860054C432 /* LocationVC.swift in Sources */,
 				EE7E74C824A217340091EF6E /* Extensions.swift in Sources */,
 				EE7E74CC24A2421B0091EF6E /* Constants.swift in Sources */,
+				EE37669E24A36B17009B9DE1 /* RealmConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

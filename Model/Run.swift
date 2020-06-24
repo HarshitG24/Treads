@@ -16,6 +16,10 @@ class Run: Object{
    @objc dynamic private(set) public var distance = 0.0
    @objc dynamic private(set) public var duration = 0
     
+   // list cannot be declared as dynamic as it is generic in nature
+   private(set) public var locations = List<Location>()
+    
+    
     // we need to tell realm, which property will be our primary key
     override class func primaryKey() -> String {
         return "id"
@@ -26,22 +30,23 @@ class Run: Object{
         return ["date", "pace", "duration"]
     }
     
-    convenience init(pace: Int, distance: Double, duration: Int){
+    convenience init(pace: Int, distance: Double, duration: Int, locations: List<Location>){
         self.init()
         self.id = UUID().uuidString
         self.date = NSDate()
         self.pace = pace
         self.duration = duration
         self.distance = distance
+        self.locations = locations
     }
     
     // static here so that, we need make the run object static
     // we need to create realm object for every operation
-    static func addRunToRealm(pace: Int, distance: Double, duration: Int){
+    static func addRunToRealm(pace: Int, distance: Double, duration: Int, locations: List<Location>){
         REALM_QUEUE.sync {
-            let run =  Run(pace: pace, distance: distance, duration: duration)
+            let run =  Run(pace: pace, distance: distance, duration: duration, locations: locations)
             do{
-                let realm = try Realm()
+                let realm = try Realm(configuration: RealmConfig.runDataConfig)
                 try realm.write{
                     realm.add(run)
                     try realm.commitWrite() // safe to use, ensure everything is saved
@@ -55,7 +60,7 @@ class Run: Object{
     // order of data is not fixed here.
     static func getAllRuns() -> Results<Run>?{
         do{
-            let realm = try Realm()
+            let realm = try Realm(configuration: RealmConfig.runDataConfig)
             var runs = realm.objects(Run.self)
             runs = runs.sorted(byKeyPath: "date", ascending: false)
             return runs
